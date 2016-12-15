@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 freeboard
 ==========
 
@@ -179,3 +180,6 @@ $(function()
 Copyright © 2013 Jim Heising (https://github.com/jheising)<br/>Copyright © 2013 Bug Labs, Inc. (http://buglabs.net)<br/>Licensed under the **MIT** license.
 
 ---
+=======
+# Sensing-Dhaka
+>>>>>>> 99e0c03694823c17878ad872bfa270ca00fb11ce

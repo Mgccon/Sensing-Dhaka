@@ -1,0 +1,169 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"title": "Dust Particles Ericsson Office Floor3",
+			"width": 1,
+			"row": {
+				"3": 9
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"Dust Particles\"][\"459cd7cd-fe15-40a9-9885-fc199b6b43ce\"]",
+						"units": "ug/m3",
+						"min_value": 0,
+						"max_value": "1"
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"value": [
+							"datasources[\"Dust Particles\"][\"459cd7cd-fe15-40a9-9885-fc199b6b43ce\"]"
+						],
+						"include_legend": true,
+						"legend": "ug/m3"
+					}
+				}
+			]
+		},
+		{
+			"title": "HumidityEricsson Office Floor3",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 2
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"Humidity\"][\"0dd7ac14-febb-4990-8a1b-2848ff825f35\"].toFixed(1)",
+						"units": "%",
+						"min_value": 0,
+						"max_value": 100
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"value": [
+							"datasources[\"Humidity\"][\"0dd7ac14-febb-4990-8a1b-2848ff825f35\"]"
+						],
+						"include_legend": true,
+						"legend": "%"
+					}
+				}
+			]
+		},
+		{
+			"title": "Temperature Ericsson Office Floor3",
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 3
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"Temperature\"][\"dbb76770-4825-4157-87f8-aae40c791e8c\"].toFixed(1)",
+						"units": "C",
+						"min_value": 0,
+						"max_value": 100
+					}
+				},
+				{
+					"type": "sparkline",
+					"settings": {
+						"value": [
+							"datasources[\"Temperature\"][\"dbb76770-4825-4157-87f8-aae40c791e8c\"]"
+						],
+						"include_legend": true,
+						"legend": "C"
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"3": 1
+			},
+			"col": {
+				"3": 1
+			},
+			"col_width": 1,
+			"widgets": [
+				{
+					"type": "gauge",
+					"settings": {
+						"value": "datasources[\"Humidity2\"][\"0dd7ac14-febb-4990-8a1b-2848ff825f35\"].toFixed(1)",
+						"units": "%",
+						"min_value": 0,
+						"max_value": 100
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "Humidity",
+			"type": "appiot_datasource_plugin",
+			"settings": {
+				"sensor_id": "0dd7ac14-febb-4990-8a1b-2848ff825f35",
+				"network_id": "6a290c95-0705-4201-b5cf-cb6138d26fde",
+				"api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzIjoiMjAxNy0wMy0xNFQxMDowODoyOC42ODcrMDA6MDAiLCJleHAiOjE0ODk0ODYxMDgsIm5iZiI6LTYyMTM1NTk2ODAwLCJpYXQiOi02MjEzNTU5NjgwMCwibmFtZSI6IlNlbnNpbmcgRGhha2EiLCJ0b2tlblR5cGUiOiJhY2Nlc3NUb2tlbiIsImlzc3VlZCI6IjAwMDEtMDEtMDFUMDA6MDA6MDArMDA6MDAiLCJ1c2VySWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAifQ==.msfh4a+hJHwQJjOriXS0pkM8Y785t4FPwC5mg2GfCy0=",
+				"signalrAccessToken": "YjUxYTJkZjItOWViMC00MGQ3LTg5ZTUtZmIwOGM0ZTU0Y2Vh",
+				"name": "Humidity"
+			}
+		},
+		{
+			"name": "Dust Particles",
+			"type": "appiot_datasource_plugin",
+			"settings": {
+				"sensor_id": "459cd7cd-fe15-40a9-9885-fc199b6b43ce",
+				"network_id": "6a290c95-0705-4201-b5cf-cb6138d26fde",
+				"api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzIjoiMjAxNy0wMy0xNFQxMDowODoyOC42ODcrMDA6MDAiLCJleHAiOjE0ODk0ODYxMDgsIm5iZiI6LTYyMTM1NTk2ODAwLCJpYXQiOi02MjEzNTU5NjgwMCwibmFtZSI6IlNlbnNpbmcgRGhha2EiLCJ0b2tlblR5cGUiOiJhY2Nlc3NUb2tlbiIsImlzc3VlZCI6IjAwMDEtMDEtMDFUMDA6MDA6MDArMDA6MDAiLCJ1c2VySWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAifQ==.msfh4a+hJHwQJjOriXS0pkM8Y785t4FPwC5mg2GfCy0=",
+				"signalrAccessToken": "MmE0ZmNiMzgtYWFlZi00ZTliLWE4ZmYtMDA0YTQ0MzQ5MDli"
+			}
+		},
+		{
+			"name": "Temperature",
+			"type": "appiot_datasource_plugin",
+			"settings": {
+				"sensor_id": "dbb76770-4825-4157-87f8-aae40c791e8c",
+				"network_id": "6a290c95-0705-4201-b5cf-cb6138d26fde",
+				"api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzIjoiMjAxNy0wMy0xNFQxMDowODoyOC42ODcrMDA6MDAiLCJleHAiOjE0ODk0ODYxMDgsIm5iZiI6LTYyMTM1NTk2ODAwLCJpYXQiOi02MjEzNTU5NjgwMCwibmFtZSI6IlNlbnNpbmcgRGhha2EiLCJ0b2tlblR5cGUiOiJhY2Nlc3NUb2tlbiIsImlzc3VlZCI6IjAwMDEtMDEtMDFUMDA6MDA6MDArMDA6MDAiLCJ1c2VySWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAifQ==.msfh4a+hJHwQJjOriXS0pkM8Y785t4FPwC5mg2GfCy0=",
+				"signalrAccessToken": "MWI5NTQyOGUtOWFiZC00MmQ4LWFjZTItNTAzYmZjNjBmZmI2",
+				"name": "Temperature"
+			}
+		},
+		{
+			"name": "Humidity2",
+			"type": "appiot_datasource_plugin",
+			"settings": {
+				"sensor_id": "0dd7ac14-febb-4990-8a1b-2848ff825f35",
+				"network_id": "6a290c95-0705-4201-b5cf-cb6138d26fde",
+				"api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmVzIjoiMjAxNy0wMy0xNFQxMDowODoyOC42ODcrMDA6MDAiLCJleHAiOjE0ODk0ODYxMDgsIm5iZiI6LTYyMTM1NTk2ODAwLCJpYXQiOi02MjEzNTU5NjgwMCwibmFtZSI6IlNlbnNpbmcgRGhha2EiLCJ0b2tlblR5cGUiOiJhY2Nlc3NUb2tlbiIsImlzc3VlZCI6IjAwMDEtMDEtMDFUMDA6MDA6MDArMDA6MDAiLCJ1c2VySWQiOiIwMDAwMDAwMC0wMDAwLTAwMDAtMDAwMC0wMDAwMDAwMDAwMDAifQ==.msfh4a+hJHwQJjOriXS0pkM8Y785t4FPwC5mg2GfCy0=",
+				"signalrAccessToken": "NzdmZmViNmYtZDMwMi00ZTg1LWI5NjQtZDc2YWJhNzYwYzMy"
+			}
+		}
+	],
+	"columns": 3
+}

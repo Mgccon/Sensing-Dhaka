@@ -10,24 +10,29 @@
     <link href="css/freeboard.min.css" rel="stylesheet" />
     <script src="js/freeboard.thirdparty.min.js"></script>
     <script type="text/javascript">
-        head.js("js/freeboard_plugins.min.js",
-                // *** Load more plugins here ***
-                function(){
-                    $(function()
-                    { //DOM Ready
-                        freeboard.initialize(true);
+    head.js("js/freeboard_plugins.min.js",
+    "plugins/thirdparty/freeboard-plugins-appiot.js",
+            // *** Load more plugins here ***
 
-                        var hashpattern = window.location.hash.match(/(&|#)source=([^&]+)/);
-                        if (hashpattern !== null) {
-                            $.getJSON(hashpattern[2], function(data) {
-                                freeboard.loadDashboard(data, function() {
-                                    freeboard.setEditing(false);
-                                });
+            function(){
+                $(function()
+                { //DOM Ready
+                    freeboard.initialize(true);
+
+
+
+                    var hashpattern = window.location.hash.match(/(&|#)source=([^&]+)/);
+                    if (hashpattern !== null) {
+                        $.getJSON(hashpattern[2], function(data) {
+                          var dashboard = require("./js/dashboard.json");
+                            freeboard.loadDashboard(dashboard, function() {
+                                freeboard.setEditing(false);
                             });
-                        }
+                        });
+                    }
 
-                    });
                 });
+            });
     </script>
 </head>
 <body>
@@ -38,7 +43,7 @@
         </ul>
     </div>
 </div>
-<header id="main-header" data-bind="if:allow_edit">
+<!--header id="main-header" data-bind="if:allow_edit">
     <div id="admin-bar">
         <div id="admin-menu">
             <div id="board-tools">
@@ -100,7 +105,7 @@
 	</div>
     <div id="toggle-header" data-bind="click: toggleEditing">
         <i id="toggle-header-icon" class="icon-wrench icon-white"></i></div>
-</header>
+</header-->
 
 <div style="display:hidden">
     <ul data-bind="template: { name: 'pane-template', foreach: panes}">
